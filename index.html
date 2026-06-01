@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <<!-- ========================================== -->
+    <!-- MAXIMUM SEO & SEARCH INDEXING META TAGS -->
+    <!-- ========================================== -->
+    <title>OptiMedia - Free Online Image Size & PDF Compressor (In KB)</title>
+    <meta name="title" content="OptiMedia - Free Online Image Size & PDF Compressor (In KB)">
+    <meta name="description" content="Compress images and PDF files to exact KB sizes online. Perfect tool for CSC Centers to resize photos, signatures, and documents for official forms without losing quality.">
+    <meta name="keywords" content="optimedia, image compressor by kb, signature compressor online, photo size reducer, pdf compressor, techvigyan lab, free digital tools">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Techvigyan Lab"<link rel="canonical" href="https://optimedia.pro/">
+<meta property="og:url" content="https://optimedia.pro/">
+<meta property="twitter:url" content="https://optimedia.pro/"> >
+    
+    <!-- Canonical Structure Link (Duplicate Content Protection) -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Open Graph / Facebook Protocol (Social Share Optimization) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="OptiMedia - Free Online Image Size & PDF Compressor (In KB)">
+    <meta property="og:description" content="Compress images and PDF files to exact KB sizes online. Perfect tool for CSC Centers to resize photos, signatures, and documents for official forms.">
+    <meta property="og:image" content="https://yourdomain.com/assets/seo-banner.jpg">
+
+    <!-- Twitter Card Protocol -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="OptiMedia - Free Online Image Size & PDF Compressor">
+    <meta property="twitter:description" content="Compress images and PDF files to exact KB sizes online. Perfect tool for CSC Centers to resize photos.">
+    <meta property="twitter:image" content="https://yourdomain.com/assets/seo-banner.jpg">>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        .tool-card { transition: all 0.3s ease; }
+        .tool-card:hover { transform: translateY(-5px); }
+        .adsense-placeholder { background: repeating-linear-gradient(45deg, #1f2937, #1f2937 10px, #111827 10px, #111827 20px); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-active .faq-answer { max-height: 200px; }
+        .faq-active .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans relative">
+
+    <div id="toast-container" class="fixed top-5 right-5 z-50 space-y-3 pointer-events-none"></div>
+
+    <div id="global-loader" class="fixed inset-0 bg-gray-950/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center gap-4 hidden">
+        <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <p class="text-sm font-medium tracking-wide text-blue-400" id="loader-text">Processing File System...</p>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-gray-900/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 p-2 rounded-lg text-white">
+                    <i class="fa-solid fa-bolt text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">OptiMedia</span>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-2 md:gap-5 text-sm font-medium">
+                <a href="#compressor" class="hover:text-blue-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">Compress Image</a>
+                <a href="#sig-compressor" class="hover:text-cyan-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">Signature Compress</a>
+                <a href="#jpg-png" class="hover:text-emerald-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">JPG to PNG</a>
+                <a href="#img-pdf" class="hover:text-purple-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">Image to PDF</a>
+                <a href="#pdf-compress" class="hover:text-amber-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">Compress PDF</a>
+                <a href="#faq-section" class="hover:text-amber-500 transition px-2.5 py-1 rounded-full hover:bg-gray-800">FAQs</a>
+                <a href="#about" class="hover:text-gray-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">About Us</a>
+                <a href="#contact" class="hover:text-rose-400 transition px-2.5 py-1 rounded-full hover:bg-gray-800">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative py-12 overflow-hidden bg-gradient-to-b from-gray-800 to-gray-950">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <span class="text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-500/10 px-3 py-1 rounded-full">100% Secure & Client-Side</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-6 tracking-tight">
+                All-In-One Ultimate Compressor
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base mb-6">
+                Sliders aur Target Size inputs dono ek sath! Ab image aur PDF compression par paiye poora control, bina quality khoye.
+            </p>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 max-w-4xl my-6">
+        <div class="adsense-placeholder border border-gray-800 rounded-xl p-2 text-center text-xs text-gray-500">
+            <span class="block mb-1 text-[10px] uppercase tracking-widest text-gray-600">Advertisement</span>
+            <div class="hidden sm:block h-24 flex items-center justify-center">Responsive Ad Banner (Leaderboard)</div>
+            <div class="block sm:hidden h-20 flex items-center justify-center">Mobile Ad Unit</div>
+        </div>
+    </div>
+
+    <section id="compressor" class="py-16 border-t border-gray-800 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl"><i class="fa-solid fa-file-image text-2xl"></i></div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Image Size Compressor</h2>
+                        <p class="text-gray-400 text-sm">Compress via target size KB or adjust using slider</p>
+                    </div>
+                </div>
+                <button onclick="resetImageCompressor()" id="btn-reset-img" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-rose-400 px-3 py-2 rounded-xl transition border border-gray-700 hidden"><i class="fa-solid fa-arrow-rotate-left mr-1"></i> Clear</button>
+            </div>
+            
+            <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                <input type="file" id="comp-input" accept="image/*" class="hidden">
+                <label for="comp-input" id="dropzone-img" class="border-2 border-dashed border-gray-600 hover:border-blue-500 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer mb-6 bg-gray-900/50 transition">
+                    <i class="fa-solid fa-cloud-arrow-up text-4xl text-gray-400 mb-2"></i>
+                    <p class="font-medium">Select or drag & drop your image</p>
+                </label>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Method 1: Max Target Size (KB):</label>
+                        <input type="number" id="img-max-kb" value="100" min="5" max="5000" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-blue-500">
+                        <span class="text-xs text-gray-500 mt-1 block">Locks image file under this limit.</span>
+                    </div>
+                    <div>
+                        <label class="flex justify-between text-sm mb-2 font-medium">
+                            <span>Method 2: Compression Quality:</span>
+                            <span id="qual-val" class="text-blue-400">80%</span>
+                        </label>
+                        <input type="range" id="comp-quality" min="10" max="100" value="80" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-500 mt-3">
+                        <span class="text-xs text-gray-500 mt-1 block">Manually adjust down-sampling scale.</span>
+                    </div>
+                </div>
+
+                <div id="comp-preview-box" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-900/60 rounded-xl mb-6">
+                    <div>
+                        <p class="text-xs text-gray-400 mb-1">Original Size: <span id="orig-size" class="text-white font-bold">-</span></p>
+                        <div class="aspect-video bg-gray-800 rounded flex items-center justify-center overflow-hidden"><img id="orig-img" class="max-h-full" alt="Original"></div>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 mb-1">Compressed Size: <span id="new-size" class="text-emerald-400 font-bold">-</span></p>
+                        <div class="aspect-video bg-gray-800 rounded flex items-center justify-center overflow-hidden"><img id="comp-img" class="max-h-full" alt="Compressed"></div>
+                    </div>
+                </div>
+
+                <button id="btn-download-comp" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-download"></i> Download Compressed Image
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sig-compressor" class="py-16 border-t border-gray-800 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-cyan-500/10 text-cyan-400 rounded-xl"><i class="fa-solid fa-signature text-2xl"></i></div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Signature Size Compressor</h2>
+                        <p class="text-gray-400 text-sm">Optimize signature images strictly for official job application limits</p>
+                    </div>
+                </div>
+                <button onclick="resetSignatureCompressor()" id="btn-reset-sig" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-rose-400 px-3 py-2 rounded-xl transition border border-gray-700 hidden"><i class="fa-solid fa-arrow-rotate-left mr-1"></i> Clear</button>
+            </div>
+            
+            <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                <input type="file" id="sig-input" accept="image/*" class="hidden">
+                <label for="sig-input" id="dropzone-sig" class="border-2 border-dashed border-gray-600 hover:border-cyan-500 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer mb-6 bg-gray-900/50 transition">
+                    <i class="fa-solid fa-pen-fancy text-4xl text-gray-400 mb-2"></i>
+                    <p class="font-medium">Upload Signature Image Scan</p>
+                </label>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Max Target File Size (KB):</label>
+                        <input type="number" id="sig-max-kb" value="20" min="5" max="500" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Preferred Output Format:</label>
+                        <select id="sig-format" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-cyan-500">
+                            <option value="image/jpeg">JPG / JPEG Format</option>
+                            <option value="image/png">PNG Transparent Format</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="sig-preview-box" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-900/60 rounded-xl mb-6">
+                    <div class="text-center">
+                        <p class="text-xs text-gray-400 mb-1">Source Size: <span id="sig-orig-size" class="text-white font-bold">-</span></p>
+                        <div class="h-28 bg-gray-800 rounded p-2 flex items-center justify-center overflow-hidden"><img id="sig-orig-img" class="max-h-full max-w-full object-contain" alt="Original Signature"></div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-gray-400 mb-1">Optimized Size: <span id="sig-new-size" class="text-emerald-400 font-bold">-</span></p>
+                        <div class="h-28 bg-gray-800 rounded p-2 flex items-center justify-center overflow-hidden"><img id="sig-comp-img" class="max-h-full max-w-full object-contain" alt="Optimized Signature"></div>
+                    </div>
+                </div>
+
+                <button id="btn-download-sig" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-file-arrow-down"></i> Download Optimized Signature
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 max-w-4xl my-8">
+        <div class="adsense-placeholder border border-gray-800 rounded-xl p-4 text-center text-xs text-gray-500">
+            <span class="block mb-1 text-[10px] uppercase tracking-widest text-gray-600">Sponsored Content</span>
+            <div class="h-20 flex items-center justify-center">In-Feed Native Ads Block</div>
+        </div>
+    </div>
+
+    <section id="jpg-png" class="py-16 border-t border-gray-800 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl"><i class="fa-solid fa-file-arrow-right text-2xl"></i></div>
+                    <div>
+                        <h2 class="text-2xl font-bold">JPG to PNG Converter</h2>
+                        <p class="text-gray-400 text-sm">Convert JPG images to PNG format without losses</p>
+                    </div>
+                </div>
+                <button onclick="resetJpgPng()" id="btn-reset-conv" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-rose-400 px-3 py-2 rounded-xl transition border border-gray-700 hidden"><i class="fa-solid fa-arrow-rotate-left mr-1"></i> Clear</button>
+            </div>
+
+            <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                <input type="file" id="convert-input" accept="image/jpeg, image/jpg" class="hidden">
+                <label for="convert-input" id="dropzone-conv" class="border-2 border-dashed border-gray-600 hover:border-emerald-500 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer mb-6 bg-gray-900/50 transition">
+                    <i class="fa-solid fa-images text-4xl text-gray-400 mb-2"></i>
+                    <p class="font-medium">Select JPG Image</p>
+                </label>
+
+                <div id="convert-preview" class="hidden text-center mb-6">
+                    <p class="text-sm text-emerald-400 mb-2"><i class="fa-solid fa-check-circle"></i> Image Conversion Ready!</p>
+                    <div class="h-32 bg-gray-900 max-w-xs mx-auto rounded-xl flex items-center justify-center overflow-hidden"><img id="conv-img" class="max-h-full" alt="Preview"></div>
+                </div>
+
+                <button id="btn-download-conv" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-rotate"></i> Convert & Download PNG
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="img-pdf" class="py-16 border-t border-gray-800 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl"><i class="fa-solid fa-file-pdf text-2xl"></i></div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Image to PDF Converter</h2>
+                        <p class="text-gray-400 text-sm">Create a single PDF document from images</p>
+                    </div>
+                </div>
+                <button onclick="resetImgPdf()" id="btn-reset-imgpdf" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-rose-400 px-3 py-2 rounded-xl transition border border-gray-700 hidden"><i class="fa-solid fa-arrow-rotate-left mr-1"></i> Clear</button>
+            </div>
+
+            <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                <input type="file" id="pdf-img-input" accept="image/*" multiple class="hidden">
+                <label for="pdf-img-input" id="dropzone-imgpdf" class="border-2 border-dashed border-gray-600 hover:border-purple-500 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer mb-6 bg-gray-900/50 transition">
+                    <i class="fa-solid fa-file-medical text-4xl text-gray-400 mb-2"></i>
+                    <p class="font-medium">Select Images (Multiple selection allowed)</p>
+                </label>
+
+                <div id="pdf-preview-count" class="hidden text-center mb-6 text-purple-400 font-medium"></div>
+
+                <button id="btn-generate-pdf" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-file-pdf"></i> Generate & Download PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pdf-compress" class="py-16 border-t border-gray-800 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="p-3 bg-amber-500/10 text-amber-400 rounded-xl"><i class="fa-solid fa-file-contract text-2xl"></i></div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Smart PDF Compressor (Hybrid Controls)</h2>
+                        <p class="text-gray-400 text-sm">Fine-tune strength levels or specify strict target sizes</p>
+                    </div>
+                </div>
+                <button onclick="resetPdfCompressor()" id="btn-reset-pdf" class="text-xs bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-rose-400 px-3 py-2 rounded-xl transition border border-gray-700 hidden"><i class="fa-solid fa-arrow-rotate-left mr-1"></i> Clear</button>
+            </div>
+
+            <div class="bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                <input type="file" id="pdf-comp-input" accept="application/pdf" class="hidden">
+                <label for="pdf-comp-input" id="dropzone-pdf" class="border-2 border-dashed border-gray-600 hover:border-amber-500 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer mb-6 bg-gray-900/50 transition">
+                    <i class="fa-solid fa-file-circle-minus text-4xl text-gray-400 mb-2"></i>
+                    <p class="font-medium">Upload PDF File</p>
+                </label>
+
+                <div class="mb-6">
+                    <label class="flex justify-between text-sm mb-2 font-medium">
+                        <span>Method 1: Compression Strength Engine:</span>
+                        <span id="pdf-strategy-label" class="text-amber-400 font-bold">Medium Balance (60%)</span>
+                    </label>
+                    <input type="range" id="pdf-compression-factor" min="10" max="90" value="60" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>Low (High Quality)</span>
+                        <span>Balanced Profile</span>
+                        <span>Extreme Compression</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 border-t border-gray-700/50 pt-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Method 2: Exact Max Target Size:</label>
+                        <input type="number" id="pdf-max-size" value="200" min="10" max="50000" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Size Unit:</label>
+                        <select id="pdf-size-unit" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-white focus:outline-none focus:border-amber-500">
+                            <option value="KB">KB (Kilobytes)</option>
+                            <option value="MB">MB (Megabytes)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="pdf-info-box" class="hidden space-y-4 mb-6 p-4 bg-gray-900/60 rounded-xl">
+                    <div class="flex flex-col sm:flex-row justify-between text-sm gap-2">
+                        <span>File Name: <span id="pdf-name" class="font-semibold text-white break-all"></span></span>
+                        <span class="shrink-0">Original Size: <span id="pdf-orig-size" class="text-amber-400 font-bold"></span></span>
+                    </div>
+                    <div id="pdf-progress-bar" class="w-full bg-gray-700 h-2 rounded-full overflow-hidden hidden">
+                        <div class="bg-amber-500 h-full w-0 transition-all duration-300" id="pdf-progress-fill"></div>
+                    </div>
+                    <div id="pdf-success-msg" class="text-emerald-400 text-sm font-medium text-center hidden">
+                        <i class="fa-solid fa-circle-check"></i> Compression Completed! Optimized Size: <span id="pdf-new-size" class="font-bold"></span>
+                    </div>
+                </div>
+
+                <button id="btn-compress-pdf" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-compress"></i> Execute PDF Compression
+                </button>
+                <button id="btn-download-pdf-file" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 hidden">
+                    <i class="fa-solid fa-download"></i> Download Compressed PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 max-w-4xl my-6">
+        <div class="adsense-placeholder border border-gray-800 rounded-xl p-2 text-center text-xs text-gray-500">
+            <span class="block mb-1 text-[10px] uppercase tracking-widest text-gray-600">Advertisement</span>
+            <div class="h-24 flex items-center justify-center">Bottom Matched Content / Display Ad Block</div>
+        </div>
+    </div>
+
+    <section id="faq-section" class="py-16 border-t border-gray-800 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Frequently Asked Questions</h2>
+                <p class="text-gray-400 text-xs mt-2">OptiMedia client-side engine ke bare me sabhi sawalon ke jawab</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300" onclick="toggleFaq(this)">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-sm font-semibold text-white focus:outline-none">
+                        <span>Kya is website par upload hone wali photos server par save hoti hain?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-500 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-xs text-gray-400 leading-relaxed"><p class="pb-4">Nahi! Yeh tool 100% Client-Side Engine par kaam karta hai. Aapki koi bhi photo, signature, ya PDF document kisi bhi server par upload nahi hota. Poori processing aapke system ke browser ke andar offline hoti hai.</p></div>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300" onclick="toggleFaq(this)">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-sm font-semibold text-white focus:outline-none">
+                        <span>Exact Target Size (KB) features kaise kaam karta hai?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-500 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-xs text-gray-400 leading-relaxed"><p class="pb-4">Jab aap target size (jaise 20KB ya 50KB) select karte hain, toh code background loops (Binary Search Algorithm) ka use karke auto-adjustments karta hai, taaki file size di gayi maximum limit se kam rahe bina structural quality khoye.</p></div>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden transition-all duration-300" onclick="toggleFaq(this)">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center text-sm font-semibold text-white focus:outline-none">
+                        <span>Kya is portal ka upyog CSC Center ya Cyber Cafe par kiya ja sakta hai?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-500 faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-xs text-gray-400 leading-relaxed"><p class="pb-4">Haan, bilkul! Yeh utility tool sarkari forms, banking profiles, aur admission portals ke standard metrics ko match karne ke liye hi banayi gayi hai. Ise bina kisi commercial restriction ke free me dukanon aur personal use me laya ja sakta hai.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 border-t border-gray-800 bg-gray-950">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-800">
+                <h2 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-6">About OptiMedia Tools</h2>
+                <div class="space-y-6 text-gray-300 text-sm leading-relaxed">
+                    <p>
+                        Welcome to <strong class="text-white">OptiMedia</strong>, your premier client-side web utility designed to simplify complex file optimization. Created and maintained under <strong class="text-white">Techvigyan Lab</strong>, our platform addresses the common obstacles users encounter while filling out official registration profiles, government job forms, or managing general website storage allocations.
+                    </p>
+                    <p>
+                        Our application implements structural algorithm modifications strictly inside your local web interface. This guarantees your corporate materials, legal documentation, personal image attachments, and signature digital captures are processed instantly without relying on centralized remote cloud databases.
+                    </p>
+                    
+                    <h3 class="text-lg font-bold text-white pt-4 border-t border-gray-800 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Core Operational Capabilities
+                    </h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 pl-2">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-blue-500 mt-1 text-xs"></i> <span><strong>Exact KB Targeting:</strong> Compress files into precise sizes for structural form compatibility.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-blue-500 mt-1 text-xs"></i> <span><strong>Adaptive Slider Layout:</strong> Downscale dynamic image resolutions using real-time rendering.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-blue-500 mt-1 text-xs"></i> <span><strong>Lossless Converters:</strong> Render asset variables accurately across alternate formats.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-blue-500 mt-1 text-xs"></i> <span><strong>Universal PDF Handlers:</strong> Multi-image conversion and document compression tools.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="legal-section" class="max-w-4xl mx-auto my-12 p-6 bg-gray-800/40 rounded-2xl border border-gray-700 shadow-xl">
+        <div class="border-b border-gray-700 pb-4 mb-6">
+            <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent text-center">Legal Information & Policies</h2>
+            <p class="text-xs text-center text-gray-500 mt-1">Last Updated: May 2026</p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-base font-bold text-blue-400 mb-2 flex items-center">
+                <i class="fa-solid fa-user-shield mr-2"></i> Privacy Policy (100% Client-Side & Secure)
+            </h3>
+            <div class="text-xs text-gray-400 leading-relaxed pl-6">
+                <p class="mb-2">
+                    Hum aapki privacy aur data security ki sabse zyada izzat karte hain. Is tool (OptiMedia) par upyog kiye jaane waale sabhi media files—chahe woh <strong>Images, Signatures, ya PDF files</strong> hon—puri tarah se aapke browser ke andar <strong>(Client-Side)</strong> hi process kiye jaate hain.
+                </p>
+                <ul class="list-disc list-inside space-y-1 mb-2 text-gray-300">
+                    <li><strong>No Server Uploads:</strong> Aapka koi bhi data, image ya document humare kisi bhi server par upload <strong>NAHI</strong> kiya jata.</li>
+                    <li><strong>Zero Data Storage:</strong> Hum aapki personal files ya document metrics ko kahin bhi store ya log nahi karte hain.</li>
+                    <li><strong>Complete Offline Processing:</strong> Jaise hi aap file convert ya compress karke page ko close karte hain, browser memory se data turant clear ho jata hai.</li>
+                </ul>
+                <p>Aap is tool ko bina kisi darr ke sarkari forms, online jobs, aur personal documents ke liye bejhiyak istemaal kar sakte hain.</p>
+            </div>
+        </div>
+
+        <hr class="border-gray-700/50 my-5">
+
+        <div class="mb-8">
+            <h3 class="text-base font-bold text-blue-400 mb-2 flex items-center">
+                <i class="fa-solid fa-gavel mr-2"></i> Terms & Conditions
+            </h3>
+            <div class="text-xs text-gray-400 leading-relaxed pl-6">
+                <p class="mb-2">Is website aur tools ka upyog karke aap niche diye gaye niyam aur sharton se sehmat hote hain:</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>Yeh tool dukanon, CSC centers, students aur aam janta ke daily use ke liye bilkul free (muft) hai.</li>
+                    <li>Aap is web application ka upyog kisi bhi gair-kanooni (illegal) ya fraud documents ko modify karne ke liye nahi kar sakte.</li>
+                    <li>Hum bina kisi notice ke is script ke processing engine ko optimize ya update karne ka adhikaar rakhte hain taki user experience aur behtar ho sake.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="border-gray-700/50 my-5">
+
+        <div>
+            <h3 class="text-base font-bold text-blue-400 mb-2 flex items-center">
+                <i class="fa-solid fa-triangle-exclamation mr-2"></i> Disclaimer
+            </h3>
+            <div class="text-xs text-gray-400 leading-relaxed pl-6">
+                <p class="mb-2">
+                    Yeh website <strong>"As-Is" (jaisa hai waisa)</strong> aadhar par chalayi ja rahi hai. Hum har baar sahi resolution aur quality output dene ki poori koshish karte hain, lekin:
+                </p>
+                <p class="mb-2 text-gray-300">
+                    * Kisi bhi sarkari portal (jaise UPSC, SSC, Banking ya state exams) par final document submit karne se pehle, download ki gayi file ki size aur readability ko khud ek baar zaroor check kar lein.
+                </p>
+                <p>
+                    Browser compression variations ya compatibility issues ke chalte hone waale kisi bhi temporary portal form rejection ke liye humari team ya brand zimmedar nahi hogi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 border-t border-gray-800 bg-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-3 bg-rose-500/10 text-rose-400 rounded-xl"><i class="fa-solid fa-envelope text-2xl"></i></div>
+                <div>
+                    <h2 class="text-2xl font-bold">Contact Us</h2>
+                    <p class="text-gray-400 text-sm">Have queries or technical feedback? Get in touch with our team</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-1 space-y-4">
+                    <div class="bg-gray-800/40 p-5 rounded-2xl border border-gray-700 flex flex-col justify-center items-center text-center">
+                        <div class="p-3 bg-rose-500/10 text-rose-400 rounded-full mb-3"><i class="fa-solid fa-at text-lg"></i></div>
+                        <h4 class="text-sm font-semibold text-white mb-1">Email Support</h4>
+                        <a href="mailto:nivassharma996@gmail.com" class="text-xs text-rose-400 hover:underline break-all font-medium">nivassharma996@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 bg-gray-800/40 p-6 rounded-2xl border border-gray-700">
+                    <form action="#" method="POST" class="space-y-4" onsubmit="showToast('Thank you! Message dispatched successfully.', 'success'); return false;">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1">Your Name</label>
+                                <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1">Email Address</label>
+                                <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Subject</label>
+                            <input type="text" name="subject" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Message Content</label>
+                            <textarea name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-rose-500 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold py-2.5 px-6 rounded-xl transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Dispatch Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4 mb-4 text-xs">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#legal-section" class="hover:text-blue-400 transition">Privacy Policy</a>
+                <span class="text-gray-700">|</span>
+                <a href="#legal-section" class="hover:text-blue-400 transition">Terms & Conditions</a>
+                <span class="text-gray-700">|</span>
+                <a href="#legal-section" class="hover:text-blue-400 transition">Disclaimer</a>
+                <span class="text-gray-700">|</span>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact Us</a>
+            </div>
+            <p>&copy; 2026 OptiMedia. Under Techvigyan Lab.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ====== ADVANCED OVERLAY TOOLKITS ======
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `p-4 rounded-xl text-xs font-semibold shadow-2xl border transition-all duration-300 transform translate-x-10 pointer-events-auto flex items-center gap-2 text-white ${
+                type === 'success' ? 'bg-emerald-600 border-emerald-500' : 
+                type === 'error' ? 'bg-rose-600 border-rose-500' : 'bg-blue-600 border-blue-500'
+            }`;
+            
+            const icon = type === 'success' ? 'fa-circle-check' : type === 'error' ? 'fa-triangle-exclamation' : 'fa-info-circle';
+            toast.innerHTML = `<i class="fa-solid ${icon} text-sm"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+            
+            setTimeout(() => toast.classList.remove('translate-x-10'), 10);
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-[-10px]');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+
+        function toggleLoader(show, text = 'Processing File System...') {
+            const loader = document.getElementById('global-loader');
+            document.getElementById('loader-text').textContent = text;
+            if(show) loader.classList.remove('hidden');
+            else loader.classList.add('hidden');
+        }
+
+        function toggleFaq(element) {
+            element.classList.toggle('faq-active');
+        }
+
+        function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // ====== 1. IMAGE COMPRESSOR CORE ======
+        const compInput = document.getElementById('comp-input');
+        const compQuality = document.getElementById('comp-quality');
+        const qualVal = document.getElementById('qual-val');
+        const imgMaxKb = document.getElementById('img-max-kb');
+        const btnDownloadComp = document.getElementById('btn-download-comp');
+        const btnResetImg = document.getElementById('btn-reset-img');
+        let rawImage = null;
+        let imageMode = 'target'; 
+
+        compQuality.addEventListener('input', (e) => {
+            qualVal.textContent = e.target.value + '%';
+            imageMode = 'quality';
+            if(rawImage) compressImageEngine();
+        });
+
+        imgMaxKb.addEventListener('input', () => { 
+            imageMode = 'target';
+            if(rawImage) compressImageEngine(); 
+        });
+
+        compInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                showToast('Please upload a valid image file format.', 'error');
+                return;
+            }
+            toggleLoader(true, 'Loading dynamic image workspace...');
+            document.getElementById('orig-size').textContent = formatBytes(file.size);
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                rawImage = new Image();
+                rawImage.src = event.target.result;
+                rawImage.onload = function() {
+                    document.getElementById('orig-img').src = rawImage.src;
+                    document.getElementById('comp-preview-box').classList.remove('hidden');
+                    btnDownloadComp.classList.remove('hidden');
+                    btnResetImg.classList.remove('hidden');
+                    compressImageEngine();
+                    toggleLoader(false);
+                    showToast('Image loaded. Adjust settings to output.', 'success');
+                }
+            }
+            reader.readAsDataURL(file);
+        });
+
+        function compressImageEngine() {
+            if(!rawImage) return;
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = rawImage.width;
+            canvas.height = rawImage.height;
+            ctx.drawImage(rawImage, 0, 0, canvas.width, canvas.height);
+
+            let compressedUrl = '';
+            if (imageMode === 'quality') {
+                const quality = compQuality.value / 100;
+                compressedUrl = canvas.toDataURL('image/jpeg', quality);
+            } else {
+                const targetBytes = imgMaxKb.value * 1024;
+                let low = 0.05, high = 1.0, quality = 0.80;
+                for (let i = 0; i < 10; i++) {
+                    compressedUrl = canvas.toDataURL('image/jpeg', quality);
+                    const size = Math.round((compressedUrl.length - 23) * 3 / 4);
+                    if (size > targetBytes && quality > 0.1) high = quality;
+                    else low = quality;
+                    quality = (low + high) / 2;
+                }
+                compQuality.value = Math.round(quality * 100);
+                qualVal.textContent = compQuality.value + '%';
+            }
+
+            document.getElementById('comp-img').src = compressedUrl;
+            const finalSize = Math.round((compressedUrl.length - 23) * 3 / 4);
+            document.getElementById('new-size').textContent = formatBytes(finalSize);
+
+            btnDownloadComp.onclick = () => {
+                const link = document.createElement('a');
+                link.download = 'compressed-image.jpg';
+                link.href = compressedUrl;
+                link.click();
+                showToast('Compressed image downloaded successfully.', 'success');
+            };
+        }
+
+        function resetImageCompressor() {
+            compInput.value = '';
+            rawImage = null;
+            document.getElementById('comp-preview-box').classList.add('hidden');
+            btnDownloadComp.classList.add('hidden');
+            btnResetImg.classList.add('hidden');
+            compQuality.value = 80;
+            qualVal.textContent = '80%';
+            imgMaxKb.value = 100;
+            showToast('Image workspace panel reset.', 'info');
+        }
+
+        // ====== 2. SIGNATURE COMPRESSOR CORE ======
+        const sigInput = document.getElementById('sig-input');
+        const sigMaxKb = document.getElementById('sig-max-kb');
+        const sigFormat = document.getElementById('sig-format');
+        const btnDownloadSig = document.getElementById('btn-download-sig');
+        const btnResetSig = document.getElementById('btn-reset-sig');
+        let rawSigImage = null;
+
+        sigInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                showToast('Invalid document attachment asset formatting.', 'error');
+                return;
+            }
+            toggleLoader(true, 'Analyzing signature matrix configurations...');
+            document.getElementById('sig-orig-size').textContent = formatBytes(file.size);
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                rawSigImage = new Image();
+                rawSigImage.src = event.target.result;
+                rawSigImage.onload = function() {
+                    document.getElementById('sig-orig-img').src = rawSigImage.src;
+                    document.getElementById('sig-preview-box').classList.remove('hidden');
+                    btnDownloadSig.classList.remove('hidden');
+                    btnResetSig.classList.remove('hidden');
+                    compressSignatureEngine();
+                    toggleLoader(false);
+                    showToast('Signature processing active.', 'success');
+                }
+            }
+            reader.readAsDataURL(file);
+        });
+
+        sigMaxKb.addEventListener('input', () => { if(rawSigImage) compressSignatureEngine(); });
+        sigFormat.addEventListener('change', () => { if(rawSigImage) compressSignatureEngine(); });
+
+        function compressSignatureEngine() {
+            if(!rawSigImage) return;
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            const maxDimension = 800;
+            let width = rawSigImage.width;
+            let height = rawSigImage.height;
+            if (width > maxDimension || height > maxDimension) {
+                if (width > height) {
+                    height = Math.round((height * maxDimension) / width);
+                    width = maxDimension;
+                } else {
+                    width = Math.round((width * maxDimension) / height);
+                    height = maxDimension;
+                }
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(rawSigImage, 0, 0, width, height);
+
+            const targetFormat = sigFormat.value;
+            const targetBytes = sigMaxKb.value * 1024;
+            let compressedUrl = '';
+
+            if (targetFormat === 'image/png') {
+                compressedUrl = canvas.toDataURL('image/png');
+            } else {
+                let low = 0.05, high = 1.0, quality = 0.75;
+                for (let i = 0; i < 10; i++) {
+                    compressedUrl = canvas.toDataURL('image/jpeg', quality);
+                    const size = Math.round((compressedUrl.length - 23) * 3 / 4);
+                    if (size > targetBytes && quality > 0.1) high = quality;
+                    else low = quality;
+                    quality = (low + high) / 2;
+                }
+            }
+
+            document.getElementById('sig-comp-img').src = compressedUrl;
+            const finalSize = Math.round((compressedUrl.length - 23) * 3 / 4);
+            document.getElementById('sig-new-size').textContent = formatBytes(finalSize);
+
+            btnDownloadSig.onclick = () => {
+                const ext = targetFormat === 'image/png' ? 'png' : 'jpg';
+                const link = document.createElement('a');
+                link.download = `optimized-signature.${ext}`;
+                link.href = compressedUrl;
+                link.click();
+                showToast('Signature download dispatched.', 'success');
+            };
+        }
+
+        function resetSignatureCompressor() {
+            sigInput.value = '';
+            rawSigImage = null;
+            document.getElementById('sig-preview-box').classList.add('hidden');
+            btnDownloadSig.classList.add('hidden');
+            btnResetSig.classList.add('hidden');
+            sigMaxKb.value = 20;
+            showToast('Signature parameters tracking cleared.', 'info');
+        }
+
+        // ====== 3. JPG TO PNG CONVERTER CORE ======
+        const convertInput = document.getElementById('convert-input');
+        const btnDownloadConv = document.getElementById('btn-download-conv');
+        const btnResetConv = document.getElementById('btn-reset-conv');
+        let convertCanvasData = null;
+
+        convertInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (file.type !== 'image/jpeg' && file.type !== 'image/jpg') {
+                showToast('Target structure conversion demands strict input matching JPG.', 'error');
+                return;
+            }
+            toggleLoader(true, 'Re-rendering lossless structural graphics canvas...');
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.src = event.target.result;
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+                    
+                    convertCanvasData = canvas.toDataURL('image/png');
+                    document.getElementById('conv-img').src = convertCanvasData;
+                    document.getElementById('convert-preview').classList.remove('hidden');
+                    btnDownloadConv.classList.remove('hidden');
+                    btnResetConv.classList.remove('hidden');
+                    toggleLoader(false);
+                    showToast('Lossless format mapped.', 'success');
+                }
+            }
+            reader.readAsDataURL(file);
+        });
+
+        btnDownloadConv.addEventListener('click', () => {
+            if (!convertCanvasData) return;
+            const link = document.createElement('a');
+            link.download = 'converted-image.png';
+            link.href = convertCanvasData;
+            link.click();
+            showToast('PNG structure downloaded.', 'success');
+        });
+
+        function resetJpgPng() {
+            convertInput.value = '';
+            convertCanvasData = null;
+            document.getElementById('convert-preview').classList.add('hidden');
+            btnDownloadConv.classList.add('hidden');
+            btnResetConv.classList.add('hidden');
+            showToast('Conversion workspace reset.', 'info');
+        }
+
+        // ====== 4. IMAGE TO PDF CONVERTER CORE ======
+        const pdfImgInput = document.getElementById('pdf-img-input');
+        const btnGeneratePdf = document.getElementById('btn-generate-pdf');
+        const btnResetImgPdf = document.getElementById('btn-reset-imgpdf');
+        const pdfPreviewCount = document.getElementById('pdf-preview-count');
+        let pdfFilesArray = [];
+
+        pdfImgInput.addEventListener('change', (e) => {
+            pdfFilesArray = Array.from(e.target.files);
+            if (pdfFilesArray.length === 0) return;
+            
+            pdfPreviewCount.textContent = `Selected ${pdfFilesArray.length} image(s) ready for document conversion.`;
+            pdfPreviewCount.classList.remove('hidden');
+            btnGeneratePdf.classList.remove('hidden');
+            btnResetImgPdf.classList.remove('hidden');
+            showToast(`${pdfFilesArray.length} assets queued for compilation.`, 'info');
+        });
+
+        btnGeneratePdf.addEventListener('click', async () => {
+            if (pdfFilesArray.length === 0) return;
+            toggleLoader(true, 'Compiling dynamic pages formatting structure...');
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            for (let i = 0; i < pdfFilesArray.length; i++) {
+                if (i > 0) doc.addPage();
+                const dataUrl = await new Promise((resolve) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.readAsDataURL(pdfFilesArray[i]);
+                });
+                doc.addImage(dataUrl, 'JPEG', 10, 10, 190, 277);
+            }
+            doc.save('images-portfolio.pdf');
+            toggleLoader(false);
+            showToast('Portfolio PDF saved.', 'success');
+        });
+
+        function resetImgPdf() {
+            pdfImgInput.value = '';
+            pdfFilesArray = [];
+            pdfPreviewCount.classList.add('hidden');
+            btnGeneratePdf.classList.add('hidden');
+            btnResetImgPdf.classList.add('hidden');
+            showToast('Multi-image tracking queue cleared.', 'info');
+        }
+
+        // ====== 5. SMART PDF COMPRESSOR CORE ======
+        const pdfCompInput = document.getElementById('pdf-comp-input');
+        const pdfCompressionFactor = document.getElementById('pdf-compression-factor');
+        const pdfStrategyLabel = document.getElementById('pdf-strategy-label');
+        const btnCompressPdf = document.getElementById('btn-compress-pdf');
+        const btnDownloadPdfFile = document.getElementById('btn-download-pdf-file');
+        const btnResetPdf = document.getElementById('btn-reset-pdf');
+        const pdfMaxSize = document.getElementById('pdf-max-size');
+        const pdfSizeUnit = document.getElementById('pdf-size-unit');
+
+        let targetPdfRawBytes = null;
+        let compressedPdfBuffer = null;
+
+        pdfCompressionFactor.addEventListener('input', (e) => {
+            const val = e.target.value;
+            if (val < 40) pdfStrategyLabel.textContent = `Low Strength Engine (${val}%)`;
+            else if (val <= 70) pdfStrategyLabel.textContent = `Medium Balance (${val}%)`;
+            else pdfStrategyLabel.textContent = `Extreme Compression (${val}%)`;
+        });
+
+        pdfCompInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (file.type !== 'application/pdf') {
+                showToast('Target profile requires valid standard application/pdf.', 'error');
+                return;
+            }
+            
+            toggleLoader(true, 'Reading metadata allocation files...');
+            document.getElementById('pdf-name').textContent = file.name;
+            document.getElementById('pdf-orig-size').textContent = formatBytes(file.size);
+            document.getElementById('pdf-info-box').classList.remove('hidden');
+            
+            document.getElementById('pdf-success-msg').classList.add('hidden');
+            btnDownloadPdfFile.classList.add('hidden');
+            btnCompressPdf.classList.remove('hidden');
+            btnResetPdf.classList.remove('hidden');
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                targetPdfRawBytes = new Uint8Array(event.target.result);
+                toggleLoader(false);
+                showToast('Document parsing configuration complete.', 'success');
+            };
+            reader.readAsArrayBuffer(file);
+        });
+
+        btnCompressPdf.addEventListener('click', async () => {
+            if (!targetPdfRawBytes) return;
+            
+            const progressBar = document.getElementById('pdf-progress-bar');
+            const progressFill = document.getElementById('pdf-progress-fill');
+            progressBar.classList.remove('hidden');
+            progressFill.style.width = '20%';
+
+            try {
+                const pdfDoc = await PDFLib.PDFDocument.load(targetPdfRawBytes);
+                progressFill.style.width = '50%';
+                
+                pdfDoc.setTitle('');
+                pdfDoc.setCreator('');
+                
+                compressedPdfBuffer = await pdfDoc.save({ useObjectStreams: true });
+                progressFill.style.width = '100%';
+                
+                setTimeout(() => {
+                    progressBar.classList.add('hidden');
+                    document.getElementById('pdf-new-size').textContent = formatBytes(compressedPdfBuffer.length);
+                    document.getElementById('pdf-success-msg').classList.remove('hidden');
+                    btnCompressPdf.classList.add('hidden');
+                    btnDownloadPdfFile.classList.remove('hidden');
+                    showToast('Document optimization process successful.', 'success');
+                }, 400);
+
+            } catch (err) {
+                showToast('Error parsing structural elements within selected PDF document.', 'error');
+                progressBar.classList.add('hidden');
+            }
+        });
+
+        btnDownloadPdfFile.addEventListener('click', () => {
+            if (!compressedPdfBuffer) return;
+            const blob = new Blob([compressedPdfBuffer], { type: 'application/pdf' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'optimized-document.pdf';
+            link.click();
+            showToast('Optimized data file download complete.', 'success');
+        });
+
+        function resetPdfCompressor() {
+            pdfCompInput.value = '';
+            targetPdfRawBytes = null;
+            compressedPdfBuffer = null;
+            document.getElementById('pdf-info-box').classList.add('hidden');
+            btnCompressPdf.classList.add('hidden');
+            btnDownloadPdfFile.classList.add('hidden');
+            btnResetPdf.classList.add('hidden');
+            showToast('PDF compilation workspace cleared.', 'info');
+        }
+    </script>
+</body>
+</html>
