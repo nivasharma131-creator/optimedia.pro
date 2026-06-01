@@ -1,1 +1,3 @@
-optimedia.pro
+type: cname
+name: www
+target/content: optimedia.pro
