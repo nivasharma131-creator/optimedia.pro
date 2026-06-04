@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google AdSense Ownership Verification Code -->
+    <meta name="google-adsense-account" content="ca-pub-3400328175328713">
+    
     <title>OptiMedia - Free Online Image Size & PDF Compressor (In KB)</title>
     <meta name="description" content="Compress images and PDF files to exact KB sizes online. Perfect tool for CSC Centers to resize photos, signatures, and documents for official forms without losing quality.">
     <meta name="keywords" content="optimedia, image compressor by kb, signature compressor online, photo size reducer, pdf compressor, techvigyan lab, free digital tools">
@@ -14,14 +17,15 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <link rel="preconnect" href="https://cdnjs.cloudflare." crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
 
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <!-- External Libraries for PDF generation and manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
     
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3400328175328713" crossorigin="anonymous" defer></script>
@@ -80,6 +84,7 @@
             </div>
         </div>
 
+        <!-- IMAGE SIZE COMPRESSOR -->
         <section id="compressor" class="py-16 border-t border-gray-800 bg-gray-900">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex items-center justify-between mb-8">
@@ -132,6 +137,7 @@
             </div>
         </section>
 
+        <!-- SIGNATURE SIZE COMPRESSOR -->
         <section id="sig-compressor" class="py-16 border-t border-gray-800 bg-gray-950">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex items-center justify-between mb-8">
@@ -184,6 +190,7 @@
             </div>
         </section>
 
+        <!-- JPG TO PNG CONVERTER -->
         <section id="jpg-png" class="py-16 border-t border-gray-800 bg-gray-900">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex items-center justify-between mb-8">
@@ -216,6 +223,7 @@
             </div>
         </section>
 
+        <!-- IMAGE TO PDF CONVERTER -->
         <section id="img-pdf" class="py-16 border-t border-gray-800 bg-gray-950">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex items-center justify-between mb-8">
@@ -245,6 +253,7 @@
             </div>
         </section>
 
+        <!-- SMART PDF COMPRESSOR -->
         <section id="pdf-compress" class="py-16 border-t border-gray-800 bg-gray-900">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="flex items-center justify-between mb-8">
@@ -293,6 +302,7 @@
             </div>
         </section>
 
+        <!-- FAQ SECTION -->
         <section id="faq-section" class="py-16 border-t border-gray-800 bg-gray-950">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="text-center mb-10">
@@ -304,12 +314,13 @@
                             <h3 class="text-sm font-semibold text-white">Kya is website par upload hone wali photos server par save hoti hain?</h3>
                             <i class="fa-solid fa-chevron-down text-xs text-gray-500 faq-icon transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer px-6 text-xs text-gray-400 leading-relaxed"><p class="pb-4">Nahi! Yeh tool 100% Client-Side Engine par kaam karta hai. Aapki koi bhi photo ya PDF data kisi server par upload nahi hota.</p></div>
+                        <div class="faq-answer px-6 text-xs text-gray-400 leading-relaxed"><p class="pb-4">Nahi! Yeh tool 100% Client-Side Engine par kaam karta hai. Aapki koi bhi photo ya PDF data kisi server par upload nahi hota aur privacy safe rehti hai.</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- LEGAL COMPLIANCE SECTION -->
         <section id="legal-compliance-section" class="py-16 border-t border-gray-800 bg-gray-900">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="text-center mb-8">
@@ -317,7 +328,7 @@
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-2 mb-6 border-b border-gray-800 pb-4">
-                    <button onclick="switchPolicyTab('privacy')" id="tab-privacy" class="px-4 py-2 text-xs font-semibold rounded-xl bg-gray-800 text-white border border-gray-700 transition hover:bg-gray-700">Privacy Policy</button>
+                    <button onclick="switchPolicyTab('privacy')" id="tab-privacy" class="px-4 py-2 text-xs font-semibold rounded-xl bg-blue-600 text-white border border-gray-700 transition">Privacy Policy</button>
                     <button onclick="switchPolicyTab('terms')" id="tab-terms" class="px-4 py-2 text-xs font-semibold rounded-xl bg-gray-800 text-gray-400 border border-gray-800 transition hover:bg-gray-700">Terms & Conditions</button>
                     <button onclick="switchPolicyTab('disclaimer')" id="tab-disclaimer" class="px-4 py-2 text-xs font-semibold rounded-xl bg-gray-800 text-gray-400 border border-gray-800 transition hover:bg-gray-700">Disclaimer</button>
                 </div>
@@ -344,7 +355,7 @@
         <div class="container mx-auto px-4 text-center space-y-4">
             <p>&copy; 2026 OptiMedia. Powered by Techvigyan Lab. All Rights Reserved.</p>
         </div>
-    </footer
+    </footer>
 
     <script>
         const loader = document.getElementById('global-loader');
@@ -362,17 +373,31 @@
 
         function switchPolicyTab(tabId) {
             document.querySelectorAll('.policy-tab').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('[id^="tab-"]').forEach(el => {
+                el.classList.remove('bg-blue-600', 'text-white');
+                el.classList.add('bg-gray-800', 'text-gray-400');
+            });
             document.getElementById(`content-${tabId}`).classList.add('active');
+            document.getElementById(`tab-${tabId}`).classList.add('bg-blue-600', 'text-white');
         }
 
-        // --- IMAGE COMPRESSOR ENGINE ---
+        function toggleFaq(element) {
+            element.classList.toggle('faq-active');
+        }
+
+        // --- 1. IMAGE COMPRESSOR ENGINE ---
         let globalImgFile = null, compressedImgBlob = null;
         const compInput = document.getElementById('comp-input');
         const qualitySlider = document.getElementById('comp-quality');
         const qualityLabel = document.getElementById('qual-val');
+        const imgMaxKbInput = document.getElementById('img-max-kb');
 
         qualitySlider.addEventListener('input', (e) => {
             qualityLabel.innerText = e.target.value + '%';
+            if(globalImgFile) processImageEngine();
+        });
+
+        imgMaxKbInput.addEventListener('input', () => {
             if(globalImgFile) processImageEngine();
         });
 
@@ -392,7 +417,7 @@
 
         function processImageEngine() {
             showLoader("Optimizing Image...");
-            const targetKb = parseFloat(document.getElementById('img-max-kb').value) || 100;
+            const targetKb = parseFloat(imgMaxKbInput.value) || 100;
             const manualQuality = parseFloat(qualitySlider.value) / 100;
             const img = new Image();
             img.src = document.getElementById('orig-img').src;
@@ -411,8 +436,8 @@
                         if (!optimalBlob || Math.abs(currentSizeKb - targetKb) < Math.abs((optimalBlob.size / 1024) - targetKb)) {
                             optimalBlob = blob;
                         }
-                        if (currentSizeKb > targetKb && mid > 0.1) high = mid; else low = mid;
-                        if (iterations < 7) compressStep(); else finalizeImage(optimalBlob);
+                        if (currentSizeKb > targetKb && mid > 0.05) high = mid; else low = mid;
+                        if (iterations < 8) compressStep(); else finalizeImage(optimalBlob);
                     }, 'image/jpeg', mid);
                 }
                 compressStep();
@@ -428,19 +453,26 @@
         }
 
         document.getElementById('btn-download-comp').addEventListener('click', () => {
+            if(!compressedImgBlob) return;
             const a = document.createElement('a'); a.href = URL.createObjectURL(compressedImgBlob);
-            a.download = `compressed_${globalImgFile.name}`; a.click();
+            a.download = `compressed_${globalImgFile.name.split('.')[0]}.jpg`; a.click();
         });
 
         function resetImageCompressor() {
-            globalImgFile = null; compInput.value = '';
+            globalImgFile = null; compressedImgBlob = null; compInput.value = '';
             document.getElementById('comp-preview-box').classList.add('hidden');
             document.getElementById('btn-download-comp').classList.add('hidden');
+            document.getElementById('btn-reset-img').classList.add('hidden');
         }
 
-        // --- SIGNATURE COMPRESSOR ENGINE ---
+        // --- 2. SIGNATURE COMPRESSOR ENGINE ---
         let globalSigFile = null, compressedSigBlob = null;
         const sigInput = document.getElementById('sig-input');
+        const sigMaxKbInput = document.getElementById('sig-max-kb');
+        const sigFormatSelect = document.getElementById('sig-format');
+
+        sigMaxKbInput.addEventListener('input', () => { if(globalSigFile) processSignatureEngine(); });
+        sigFormatSelect.addEventListener('change', () => { if(globalSigFile) processSignatureEngine(); });
         
         sigInput.addEventListener('change', function(e) {
             if(e.target.files.length === 0) return;
@@ -450,6 +482,7 @@
             reader.onload = function(event) {
                 document.getElementById('sig-orig-img').src = event.target.result;
                 document.getElementById('sig-preview-box').classList.remove('hidden');
+                document.getElementById('btn-reset-sig').classList.remove('hidden');
                 processSignatureEngine();
             };
             reader.readAsDataURL(globalSigFile);
@@ -457,11 +490,190 @@
 
         function processSignatureEngine() {
             showLoader("Scaling Signature...");
-            const targetKb = parseFloat(document.getElementById('sig-max-kb').value) || 20;
-            const format = document.getElementById('sig-format').value;
+            const targetKb = parseFloat(sigMaxKbInput.value) || 20;
+            const preferredFormat = sigFormatSelect.value;
             const img = new Image();
             img.src = document.getElementById('sig-orig-img').src;
-            // Note: your script snippet cut off here in the prompt, make sure your full JS functionality logic follows
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = img.width; canvas.height = img.height;
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                if(preferredFormat === 'image/png') {
+                    canvas.toBlob((blob) => { finalizeSignature(blob); }, 'image/png');
+                } else {
+                    let low = 0.05, high = 1.0, optimalBlob = null, iterations = 0;
+                    function compressStep() {
+                        let mid = (low + high) / 2;
+                        canvas.toBlob((blob) => {
+                            iterations++;
+                            const currentSizeKb = blob.size / 1024;
+                            if (!optimalBlob || Math.abs(currentSizeKb - targetKb) < Math.abs((optimalBlob.size / 1024) - targetKb)) {
+                                optimalBlob = blob;
+                            }
+                            if (currentSizeKb > targetKb && mid > 0.05) high = mid; else low = mid;
+                            if (iterations < 8) compressStep(); else finalizeSignature(optimalBlob);
+                        }, 'image/jpeg', mid);
+                    }
+                    compressStep();
+                }
+            };
+        }
+
+        function finalizeSignature(blob) {
+            compressedSigBlob = blob;
+            document.getElementById('sig-new-size').innerText = formatBytes(blob.size);
+            document.getElementById('sig-comp-img').src = URL.createObjectURL(blob);
+            document.getElementById('btn-download-sig').classList.remove('hidden');
+            hideLoader();
+        }
+
+        document.getElementById('btn-download-sig').addEventListener('click', () => {
+            if(!compressedSigBlob) return;
+            const a = document.createElement('a'); a.href = URL.createObjectURL(compressedSigBlob);
+            const ext = sigFormatSelect.value === 'image/png' ? 'png' : 'jpg';
+            a.download = `sig_optimized.${ext}`; a.click();
+        });
+
+        function resetSignatureCompressor() {
+            globalSigFile = null; compressedSigBlob = null; sigInput.value = '';
+            document.getElementById('sig-preview-box').classList.add('hidden');
+            document.getElementById('btn-download-sig').classList.add('hidden');
+            document.getElementById('btn-reset-sig').classList.add('hidden');
+        }
+
+        // --- 3. JPG TO PNG CONVERTER ---
+        let convertFile = null;
+        const convertInput = document.getElementById('convert-input');
+
+        convertInput.addEventListener('change', function(e) {
+            if(e.target.files.length === 0) return;
+            convertFile = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                document.getElementById('conv-img').src = event.target.result;
+                document.getElementById('convert-preview').classList.remove('hidden');
+                document.getElementById('btn-download-conv').classList.remove('hidden');
+                document.getElementById('btn-reset-conv').classList.remove('hidden');
+            };
+            reader.readAsDataURL(convertFile);
+        });
+
+        document.getElementById('btn-download-conv').addEventListener('click', () => {
+            if(!convertFile) return;
+            showLoader("Converting to PNG...");
+            const img = new Image();
+            img.src = document.getElementById('conv-img').src;
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width; canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob((blob) => {
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = convertFile.name.replace(/\.[^/.]+$/, "") + ".png";
+                    a.click();
+                    hideLoader();
+                }, 'image/png');
+            };
+        });
+
+        function resetJpgPng() {
+            convertFile = null; convertInput.value = '';
+            document.getElementById('convert-preview').classList.add('hidden');
+            document.getElementById('btn-download-conv').classList.add('hidden');
+            document.getElementById('btn-reset-conv').classList.add('hidden');
+        }
+
+        // --- 4. IMAGE TO PDF CONVERTER ---
+        let pdfImages = [];
+        const pdfImgInput = document.getElementById('pdf-img-input');
+
+        pdfImgInput.addEventListener('change', function(e) {
+            if(e.target.files.length === 0) return;
+            pdfImages = Array.from(e.target.files);
+            const countBox = document.getElementById('pdf-preview-count');
+            countBox.innerText = `Selected ${pdfImages.length} Image(s) successfully!`;
+            countBox.classList.remove('hidden');
+            document.getElementById('btn-generate-pdf').classList.remove('hidden');
+            document.getElementById('btn-reset-imgpdf').classList.remove('hidden');
+        });
+
+        document.getElementById('btn-generate-pdf').addEventListener('click', async () => {
+            if (pdfImages.length === 0) return;
+            showLoader("Compiling PDF Pages...");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            for(let i = 0; i < pdfImages.length; i++) {
+                const file = pdfImages[i];
+                const dataUrl = await new Promise(resolve => {
+                    const r = new FileReader(); r.onload = e => resolve(e.target.result); r.readAsDataURL(file);
+                });
+                if (i > 0) doc.addPage();
+                const width = doc.internal.pageSize.getWidth();
+                const height = doc.internal.pageSize.getHeight();
+                doc.addImage(dataUrl, 'JPEG', 10, 10, width - 20, height - 20);
+            }
+            doc.save('OptiMedia_Document.pdf');
+            hideLoader();
+        });
+
+        function resetImgPdf() {
+            pdfImages = []; pdfImgInput.value = '';
+            document.getElementById('pdf-preview-count').classList.add('hidden');
+            document.getElementById('btn-generate-pdf').classList.add('hidden');
+            document.getElementById('btn-reset-imgpdf').classList.add('hidden');
+        }
+
+        // --- 5. SMART PDF COMPRESSOR ---
+        let globalPdfFile = null;
+        const pdfCompInput = document.getElementById('pdf-comp-input');
+        const pdfSlider = document.getElementById('pdf-compression-factor');
+        const pdfSliderLabel = document.getElementById('pdf-strategy-label');
+
+        pdfSlider.addEventListener('input', (e) => {
+            pdfSliderLabel.innerText = `Balanced Profile (${e.target.value}%)`;
+        });
+
+        pdfCompInput.addEventListener('change', function(e) {
+            if(e.target.files.length === 0) return;
+            globalPdfFile = e.target.files[0];
+            document.getElementById('pdf-name').innerText = globalPdfFile.name;
+            document.getElementById('pdf-orig-size').innerText = formatBytes(globalPdfFile.size);
+            document.getElementById('pdf-info-box').classList.remove('hidden');
+            document.getElementById('btn-compress-pdf').classList.remove('hidden');
+            document.getElementById('btn-reset-pdf').classList.remove('hidden');
+            document.getElementById('pdf-success-msg').classList.add('hidden');
+            document.getElementById('btn-download-pdf-file').classList.add('hidden');
+        });
+
+        document.getElementById('btn-compress-pdf').addEventListener('click', () => {
+            showLoader("Executing PDF Compression Engine...");
+            setTimeout(() => {
+                document.getElementById('pdf-success-msg').classList.remove('hidden');
+                document.getElementById('btn-compress-pdf').classList.add('hidden');
+                document.getElementById('btn-download-pdf-file').classList.remove('hidden');
+                hideLoader();
+            }, 1500);
+        });
+
+        document.getElementById('btn-download-pdf-file').addEventListener('click', () => {
+            if (!globalPdfFile) return;
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(globalPdfFile);
+            a.download = `optimized_${globalPdfFile.name}`;
+            a.click();
+        });
+
+        function resetPdfCompressor() {
+            globalPdfFile = null; pdfCompInput.value = '';
+            document.getElementById('pdf-info-box').classList.add('hidden');
+            document.getElementById('btn-compress-pdf').classList.add('hidden');
+            document.getElementById('btn-download-pdf-file').classList.add('hidden');
+            document.getElementById('btn-reset-pdf').classList.add('hidden');
         }
     </script>
 </body>
