@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3400328175328713"
-     crossorigin="anonymous"></script>>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -11,21 +10,27 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Techvigyan Lab">
     
-    <link rel="canonical" href="https://optimedia.pro/"> <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://optimedia.pro/"> 
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare." crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3400328175328713" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
+    
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3400328175328713" crossorigin="anonymous" defer></script>
 
     <style>
         html { scroll-behavior: smooth; }
         .tool-card { transition: all 0.3s ease; }
         .tool-card:hover { transform: translateY(-5px); }
-        .adsense-placeholder { background: repeating-linear-gradient(45deg, #1f2937, #1f2937 10px, #111827 10px, #111827 20px); }
+        .adsense-placeholder { background: repeating-linear-gradient(45deg, #1f2937, #1f2937 10px, #111827 10px, #111827 20px); content-visibility: auto; contain-intrinsic-size: 112px; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-active .faq-answer { max-height: 200px; }
         .faq-active .faq-icon { transform: rotate(180deg); }
@@ -339,7 +344,7 @@
         <div class="container mx-auto px-4 text-center space-y-4">
             <p>&copy; 2026 OptiMedia. Powered by Techvigyan Lab. All Rights Reserved.</p>
         </div>
-    </footer>
+    </footer
 
     <script>
         const loader = document.getElementById('global-loader');
@@ -456,96 +461,8 @@
             const format = document.getElementById('sig-format').value;
             const img = new Image();
             img.src = document.getElementById('sig-orig-img').src;
-            img.onload = function() {
-                const canvas = document.createElement('canvas'); const ctx = canvas.getContext('2d');
-                canvas.width = img.width; canvas.height = img.height;
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                canvas.toBlob((blob) => {
-                    compressedSigBlob = blob;
-                    document.getElementById('sig-new-size').innerText = formatBytes(blob.size);
-                    document.getElementById('sig-comp-img').src = URL.createObjectURL(blob);
-                    document.getElementById('btn-download-sig').classList.remove('hidden');
-                    hideLoader();
-                }, format, 0.6);
-            };
+            // Note: your script snippet cut off here in the prompt, make sure your full JS functionality logic follows
         }
-
-        // --- JPG TO PNG CONVERTER ---
-        let globalConvFile = null;
-        document.getElementById('convert-input').addEventListener('change', function(e) {
-            if(e.target.files.length === 0) return;
-            globalConvFile = e.target.files[0];
-            document.getElementById('convert-preview').classList.remove('hidden');
-            document.getElementById('btn-download-conv').classList.remove('hidden');
-        });
-
-        document.getElementById('btn-download-conv').addEventListener('click', () => {
-            const img = new Image(); img.src = document.getElementById('conv-img').src;
-            const canvas = document.createElement('canvas');
-            canvas.width = 300; canvas.height = 150; // Standard fallback sizing
-            canvas.getContext('2d').fillRect(0,0,300,150);
-            canvas.toBlob((blob) => {
-                const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-                a.download = `converted.png`; a.click();
-            }, 'image/png');
-        });
-
-        // --- IMAGE TO PDF (FIXED AUTO-ALIGNMENT BUG) ---
-        let globalPdfImages = [];
-        document.getElementById('pdf-img-input').addEventListener('change', function(e) {
-            globalPdfImages = Array.from(e.target.files);
-            document.getElementById('btn-generate-pdf').classList.remove('hidden');
-        });
-
-        document.getElementById('btn-generate-pdf').addEventListener('click', async () => {
-            showLoader("Compiling PDF...");
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            for(let i=0; i<globalPdfImages.length; i++) {
-                if(i > 0) doc.addPage();
-                const base64 = await new Promise(r => { const reader = new FileReader(); reader.onload = ev => r(ev.target.result); reader.readAsDataURL(globalPdfImages[i]); });
-                // Clean Safe Mapping Parameters
-                doc.addImage(base64, 'JPEG', 10, 10, 190, 260);
-            }
-            doc.save('images_pack.pdf');
-            hideLoader();
-        });
-
-        // --- SMART PDF COMPRESSOR (FIXED CORRUPTION BUG) ---
-        let globalPdfFile = null, compressedPdfBytes = null;
-        document.getElementById('pdf-comp-input').addEventListener('change', function(e) {
-            globalPdfFile = e.target.files[0];
-            document.getElementById('pdf-orig-size').innerText = formatBytes(globalPdfFile.size);
-            document.getElementById('pdf-info-box').classList.remove('hidden');
-            document.getElementById('btn-compress-pdf').classList.remove('hidden');
-        });
-
-        document.getElementById('btn-compress-pdf').addEventListener('click', async () => {
-            showLoader("Compressing Struct...");
-            try {
-                const arrayBuffer = await globalPdfFile.arrayBuffer();
-                const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
-                
-                // 🟢 FIX: Objects compressed safely without trimming raw bytes array directly
-                const compressedBytes = await pdfDoc.save({ useObjectStreams: true });
-                compressedPdfBytes = compressedBytes;
-
-                document.getElementById('pdf-success-msg').classList.remove('hidden');
-                document.getElementById('btn-download-pdf-file').classList.remove('hidden');
-            } catch (err) {
-                alert("PDF format compatibility error.");
-            } finally {
-                hideLoader();
-            }
-        });
-
-        document.getElementById('btn-download-pdf-file').addEventListener('click', () => {
-            const blob = new Blob([compressedPdfBytes], { type: 'application/pdf' });
-            const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-            a.download = `compressed_${globalPdfFile.name}`; a.click();
-        });
-
-        function toggleFaq(element) { element.classList.toggle('faq-active'); }
     </script>
 </body>
 </html>
